@@ -1,0 +1,173 @@
+#include <stdio.h>
+#include <math.h>
+
+double equation(double x)
+{
+    return x * x * x - 4 * x - 9; // can change the equation later
+}
+
+void bisection(double a, double b, int maxIterations)
+{
+    if (equation(a) * equation(b) >= 0)
+    {
+        printf("Invalid initial interval\n");
+        return;
+    }
+
+    double c;
+    int iteration = 0;
+
+    printf("Iteration\t Letf interval\t Right interval\t Average\t f(x)\n");
+    printf("___________________________\n");
+
+    do
+    {
+        c = (a + b) / 2;
+
+        printf("%8d\t%10lf\t%10lf\t%10lf\t%10lf\n", iteration, a, b, c, equation(c));
+
+        if (equation(c) == 0.0)
+            break;
+
+        if (equation(c) * equation(a) < 0)
+            b = c;
+        else
+            a = c;
+
+        iteration++;
+    } while (iteration <= maxIterations && fabs(b - a) > 1e-10);
+
+    printf("___________________________\n");
+
+    printf("Root:%d \nNumber of iterations: %lf\n", iteration, c);
+}
+
+int main()
+{
+    double a, b;
+    int maxIterations;
+
+    printf("Enter the left endpoint of the interval: ");
+    scanf("%lf", &a);
+
+    printf("Enter the right endpoint of the interval: ");
+    scanf("%lf", &b);
+
+    printf("Enter the maximum number of iterations: ");
+    scanf("%d", &maxIterations);
+
+    bisection(a, b, maxIterations);
+
+    return 0;
+}
+
+update the bisection code and make it samiler to these 2 example
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+
+#define F(x) (x * x * x - 4 * x -9)
+#define Fu "f(x) = x^2 - 4x - 9 = 0"
+#define SECANT(x0, x1) (x1 - ((x1 - x0) / (F(x1) - F(x0))) * F(x1))
+
+using namespace std;
+
+int FindRoot(double x0, double x1, double &root){
+    int itr = 0;
+    double x2, prev_x2;
+    prev_x2 = x1; // Initialize previous root value with x1 for Secant
+    do{
+        x2 = SECANT(x0, x1);
+        itr++; // Increment the iteration count
+        cout << "Iteration: " << itr << " value: " << x2 << "; "
+             << "For x0: " << x0 << "x1: " << x1 << endl;
+        if (fabs(x2 - prev_x2) <= 0.0001)
+            break;    // stop on: |x(n) - x(n-1)| <= 0.0001
+        prev_x2 = x2; // Update previous root value
+        x0 = x1;      // Update x0 with the current value of x1
+        x1 = x2;      // Update x1 with the current value of x2
+    } while (true);
+    root = x2;
+    return itr;
+}
+
+int main() {
+    int ch;
+    double x0, x1, root; // Set precision to 4 decimal places
+    cout << "Enter Interval (x0, x1): ";
+    cin >> x0 >> x1;
+    cout << fixed << setprecision(4);
+    cout << "\t\tSecant Method" << endl;
+    int itr = FindRoot(x0, x1, root); // Pass root by reference
+    cout << "Root of Function " << Fu << ": " << root << endl
+         << "After: " << itr << " Iterations" << endl;
+    return 0;
+}
+
+// Sample Output:
+// Enter Interval (x0, x1): 2 3
+//                 Secant Method
+// Iteration: 1 value: 2.6000; For x0: 2.0000x1: 3.0000
+// Iteration: 2 value: 2.6933; For x0: 3.0000x1: 2.6000
+// Iteration: 3 value: 2.7072; For x0: 2.6000x1: 2.6933
+// Iteration: 4 value: 2.7065; For x0: 2.6933x1: 2.7072
+// Iteration: 5 value: 2.7065; For x0: 2.7072x1: 2.7065
+// Root of Function f(x) = x^2 - 4x - 9 = 0: 2.7065
+// After: 5 Iterations
+
+
+
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+
+#define F(x) (x * x * x - 4 * x - 9)
+#define Fu "f(x) = x^2 - 4x - 9 = 0"
+#define REGULA_FALSI(x0, x1) ((x0 * F(x1) - x1 * F(x0)) / (F(x1) - F(x0)))
+
+using namespace std;
+
+int FindRoot(double x0, double x1, double &root) { // Pass root by reference
+    int itr = 0;
+    double false_root, prev_false_root;
+    prev_false_root = x0; // Initialize previous root value with x0
+    do {
+        false_root = REGULA_FALSI(x0, x1);
+        if (F(x0) * F(false_root) < 0)
+            x1 = false_root; // solution is in the left side of false_root
+        else if (F(false_root) * F(x1) < 0)
+            x0 = false_root; // solution is in the right side of false_root
+        cout << "Iteration: " << ++itr << " value: " << false_root << endl;
+        if (fabs(false_root - prev_false_root) <= 0.0001)
+            break; // stop on: |x(n) - x(n-1)| <= 0.0001
+        prev_false_root = false_root; // Update previous false_root value
+    } while (true);
+    root = false_root; // Modify the root variable
+    return itr;
+}
+
+int main() {
+    int ch;
+    double x0, x1, root; // Set precision to 4 decimal places
+    cout << "Enter Interval (x0, x1): ";
+    cin >> x0 >> x1;
+    cout << fixed << setprecision(4);
+    cout << "\t\tRegular_Falsi" << endl;
+    int itr = FindRoot(x0, x1, root); // Pass root by reference
+    cout << "Root of Function " << Fu << ": " << root << endl
+         << "After: " << itr << " Iterations" << endl;
+    return 0;
+}
+
+
+// Sample Output:
+// Enter Interval (x0, x1): 2 3
+//                 Regular_Falsi
+// Iteration: 1 value: 2.6000
+// Iteration: 2 value: 2.6933
+// Iteration: 3 value: 2.7049
+// Iteration: 4 value: 2.7063
+// Iteration: 5 value: 2.7065
+// Iteration: 6 value: 2.7065
+// Root of Function f(x) = x^2 - 4x - 9 = 0: 2.7065
+// After: 6 Iterations
