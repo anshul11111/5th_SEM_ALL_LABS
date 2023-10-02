@@ -1,5 +1,5 @@
 -- 1. Logon to Oracle by user name given to you.
-
+connect 
 -- (Assuming you've already logged in)
 
 -- 2. See list of tables by using “Tab / user_tables / cat” tables.
