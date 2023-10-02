@@ -1,4 +1,4 @@
-# Lab Assignments Repository
+# Lab Work Repository
 
 Welcome to the repository for lab assignments related to your fifth semester of BTech. This repository contains materials and assignments for the following three labs:
 
