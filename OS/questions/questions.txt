@@ -1,0 +1,15 @@
+1	C Program to demonstrate the working of fork() system call
+2	C Program in which Parent Process Computes the SUM OF EVEN NUMBERS  and Child Process Computes the sum of ODD NUMBERS stored in array using fork () . First the child process should print its answer i.e sum of odd numbers, then parent should print its answer, i.e sum of even numbers.
+3	C program to Implement the Orphan Process and Zombie Process.
+4	C program to Implement FCFS CPU Scheduling Algorithm
+5	C program to implement  SRTF algorithm.
+6	C program to Implement Round Robin CPU scheduling algo.
+7	C program to Implement Preemptive Priority CPU scheduling algo
+8	C program to Implement Interprocess Communication using PIPE
+9	C program to Implement Interprocess Communication using shared memory
+10	C program to demonstrate working of execl() where parent process executes "ls" command and child process executes "date" command
+11	C program to Implement Banker’s Algo for Deadlock Avoidance to check for the safe and unsafe state.
+12	C program to Implement First In First Out  page replacement policy
+13	C program to Implement  Least recently used page replacement policy
+14	C program to Implement FCFS Disk Scheduling Algorithm
+15.	C program to Implement SCAN Disk Scheduling Algorithm
