@@ -1,0 +1,78 @@
+DBMS Practical Lab Sheet - 1
+Platform :Oracle Express
+
+1. Logon to Oracle by user name given to you.
+2. See list of tables by using “Tab / user_tables / cat” tables.
+3. View the user name (Make sure it’s your user name: eg CSA23 etc)
+4. View today’s date.
+5. Clear screen.
+6. See the list of all environment variables.
+7. Perform some mathematical operations by using dual. (Addition, multiplication etc.)
+8. Create a table “Student” with following attributes :
+
+Field Name	Type		Size
+Rollno		Number
+Name		varchar2	10
+City		varchar2	10
+
+9. Display the structure of table
+10. see the records of the table
+11. Insert the following data into the table
+
+(As it is !! No Change)
+
+| Rollno |  Name  |   City   |
+|--------|--------|----------|
+|   1    |  Amit  | Dehradun |
+|   2    |  Kapil |  Meerut  |
+|   3    | (empty)| Dehradun |
+|   4    |  Amit  |  (empty) |
+|   5    |(empty) |  Delhi   |
+
+
+→Commit the data (Do not Forget)
+
+12. see the records of the table.
+13. add a new column named “Email”, type varchar2(15)
+14. see the records of the table.
+15. Display the structure of table
+16. Set the email of all records to btech@gmail.com
+17. see the records of the table.
+18. roll back the email data
+19. see the records of the table.
+20. Display the structure of table
+
+21. Set the email of ‘Amit’ to ‘abc@xyz’
+22. see the records of the table
+23. Complete all the blank records of your own and add 5 More records (Total = 10).
+24. commit data & clear the screen (clear screen)
+25. see all records.
+26. set linesize 20
+27. again see all records. (note the display style)
+28. see the structure of table (is it same as displayed in question no. 20? )
+29. let linesize 500
+30. again see all records. (note the display style)
+31. set pagesize 7
+32. again see all records. (note the display style)
+33. set pagesize 200
+34. again see all records. (note the display style)
+35. set heading off
+36. again see all records. (note the display style)
+37. set heading on
+38. again see all records. (note the display style)
+39. set pause on
+40. again see all records. ( if not displayed , press enter , see records once more)
+41. Remove the name column
+42. Display the structure
+43. See the records.
+44. Make a duplicate copy of Student table with the name “Duplicate”
+46. Truncate the “Student” table.
+47. Rollback and see the records.
+48. Drop the STUDENT table.
+49. See the records of dropped table.
+50. Rollback and again See the records of dropped table
+51. See the list of all tables. ( Is your table present?)
+52. Show user name
+53. Disconnect.
+
+

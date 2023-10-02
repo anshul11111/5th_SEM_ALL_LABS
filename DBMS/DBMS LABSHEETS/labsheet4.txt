@@ -1,0 +1,46 @@
+1. Logon to Oracle using your User Name and check your user name.
+2. See a list of all tables.
+3. Create a table "Car" with the following attributes (Assume Data Type and size of columns of your own, they must be relevant):
+   - ModelNo (Primary Key)
+   - ModelName (Unique)
+   - Company (Not null)
+   - EngineCapacity (> 1000)
+   - Color
+   - Doors (> 1)
+   - Weight (> 1000)
+   - TopSpeed (< 500)
+   - RPM (> 5000)
+   - CostPrice
+   - SalePrice
+4. Display the structure of the table.
+5. Populate the table with all the car models of "Maruti Suzuki," "Hyundai," "Honda," etc companies. (Please fill proper and relevant values for each tuple)
+6. Write queries for the following outputs:
+   - Show all records.
+   - Show names of all the cars of Maruti.
+   - Show records of all Cars whose engine is more than 2000 CC.
+   - Show records of all cars of white color.
+   - Show records of all vehicles which are costing more than 4 Lacs.
+   - Show the cost price, sale price, and profit on all cars.
+   - Show the names of all cars alphabetically.
+7. Now create another table named "Vehicle" from the "Car" table created in Question No.3 without records; however, the columns should be in the following order (Do not write the complete new create table statement, rather create a table from the existing Car Table without records). (Do not copy any records from Car Table, copy only columns)
+   - TopSpeed
+   - Doors
+   - CostPrice
+   - ModelName
+   - Company
+   - RPM
+   - EngineCapacity
+   - Color
+   - ModelNo
+   - Weight
+   - SalePrice
+8. Display the structure of the new table.
+9. Now populate the "Vehicle" table with all the records of the "Car" table, but the records should be inserted in random order this time (not in the same order as the "Car" Table). (Like 11, 4, 5, 1, 7, 3, 2, 9th record, etc.). Do not write new Insert queries; rather, copy records from the "Car" table in a random order.
+10. Re-write queries given in Question 6 on the "Vehicle" table and notice the output (Is there any difference?):
+    - Show all records.
+    - Show names of all the cars of Maruti.
+    - Show records of all Cars whose engine is more than 2000 CC.
+    - Show records of all cars whose color is white.
+    - Show records of all vehicles which are costing more than 4 Lacs.
+    - Show the cost price, sale price, and profit on all cars.
+    - Show the names of all cars alphabetically.

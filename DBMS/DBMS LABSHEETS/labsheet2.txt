@@ -1,0 +1,67 @@
+DBMS Practical List – 2
+Platform : Oracle
+1. Logon to Oracle by user name given to you.
+2. See list of tables by using “Tab”
+3. View the user name, make sure it’s your login name.
+4. Create a new table “Employee” with following attributes/fields :
+Field Name Data Type Size of column
+EmpCode Number
+Name varchar2 6 (Six)
+Salary Number
+5. Display the structure of table
+6. See the records of the table
+7. Insert the following data into the table using any method:
+| EmpCode |  Name     | Salary  |
+|---------|-----------|---------|
+| 101     | Amit      | 30000   |
+| 201     | Kapil     | 22000   |
+| 301     | Rohit     | 45000   |
+| 401     | Amit      | 27000   |
+| 401     | Amit      | 27000   |
+
+ Commit the data (Do not Forget)
+8. See the records of the table.
+9. Try to Add the following new record
+| EmpCode |  Name        | Salary  |
+|---------|--------------|---------|
+| 901     | Bhattacharya | 33000   |
+
+Note the output, even if it is error!
+10. See the structure of table and note the size of name column
+11. Increase the size of name column to 25.
+12. See the structure of table again.
+13. See the records of table.
+14. Now again try to add the above record again,
+15. See the records of the table
+16. Reduce the size of name column to 5. (Note the output even if it is an error)
+17. Commit the data and see all records.
+18. Execute the following SQL queries and note the result:
+a) Select name from employee.
+b) Select name, name, name, name from employee.
+c) Select name, empcode from employee order by salary.
+d) Select name, Salary, salary + 500 , salary-50000 from employee.
+e) Select sum(salary) from employee;
+f) Select min(salary) from employee;
+g) Select max(salary) from employee;
+19. Display name, actual salary, 50 % increased salary of all employees.
+20. Make a copy of employee table as “NewEmp” table with all records.
+21. See the records of “NewEmp” table.
+22. Make a copy of employee table as “Emp2” table with no (Zero) records.
+23. See the records of all 3 table (Employee, NewEmp and Emp2).
+24. See the structure of all 3 table (Employee, NewEmp and Emp2).
+25. Create a new table “MyTable” from employee table with only Name and Salary columns.
+26. See the records of Employee Table and MyTable.
+27. See the list of all tables.
+28. Commit your data.
+29. Drop the columns “name” and “empcode” from NewEmp table.
+30. See the records of NewEmp Table.
+31. Truncate the “Mytable” table. (do not use delete command).
+32. See the records of “MyTable” table.
+33. Rollback.
+34. Again See the records of “MyTable” table. (What is your observation?)
+35. Drop the “MyTable” table.
+36. See the records of “MyTable” table.
+37. Rollback.
+38. Again See the records of “MyTable” table. (What is your observation?)
+39. See the list of all tables in our login.
+40. Commit the data.
