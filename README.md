@@ -18,7 +18,7 @@ This repository is your central hub for all lab assignments in your fifth semest
 
 ## Lab Contents
 
-### Operating Systems (OS)
+### OS
 
 The [OS](/OS) folder contains lab assignments and materials related to the Operating Systems lab.
 
@@ -26,7 +26,7 @@ The [OS](/OS) folder contains lab assignments and materials related to the Opera
 - **Resources**: You can find useful resources such as PDFs, slides, or reference materials related to the lab topics.
 - **Solutions**: Solutions to the lab assignments, provided after the submission deadline or as per the instructor's guidelines.
 
-### Computer Networks and Security (CBNST)
+### CBNST
 
 The [CBNST](/CBNST) folder contains lab assignments and materials related to the Computer Networks and Security lab.
 
@@ -34,7 +34,7 @@ The [CBNST](/CBNST) folder contains lab assignments and materials related to the
 - **Resources**: You can find useful resources such as PDFs, slides, or reference materials related to the lab topics.
 - **Solutions**: Solutions to the lab assignments, provided after the submission deadline or as per the instructor's guidelines.
 
-### Database Management Systems (DBMS)
+### DBMS
 
 The [DBMS](/DBMS) folder contains lab assignments and materials related to the Database Management Systems lab.
 
