@@ -1,3 +1,4 @@
+//newton bckwd
 #include <stdio.h>
 float u_cal(float u, int n){
 float temp = u;
