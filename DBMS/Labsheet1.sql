@@ -30,7 +30,7 @@ CREATE TABLE Student(
 );
 
 -- 9. Display the structure of the table
-DESC Student;
+DESC `Student`;
 
 -- 10. See the records of the table
 SELECT * FROM Student;

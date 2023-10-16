@@ -36,13 +36,13 @@ Note the output, even if it is error!
 16. Reduce the size of name column to 5. (Note the output even if it is an error)
 17. Commit the data and see all records.
 18. Execute the following SQL queries and note the result:
-a) Select name from employee.
-b) Select name, name, name, name from employee.
-c) Select name, empcode from employee order by salary.
-d) Select name, Salary, salary + 500 , salary-50000 from employee.
-e) Select sum(salary) from employee;
-f) Select min(salary) from employee;
-g) Select max(salary) from employee;
+(a) Select name from employee.
+(b) Select name, name, name, name from employee.
+(c) Select name, empcode from employee order by salary.
+(d) Select name, Salary, salary + 500 , salary-50000 from employee.
+(e) Select sum(salary) from employee;
+(f) Select min(salary) from employee;
+(g) Select max(salary) from employee;
 19. Display name, actual salary, 50 % increased salary of all employees.
 20. Make a copy of employee table as “NewEmp” table with all records.
 21. See the records of “NewEmp” table.

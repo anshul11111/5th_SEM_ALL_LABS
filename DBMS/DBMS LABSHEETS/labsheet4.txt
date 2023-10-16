@@ -22,7 +22,9 @@
    - Show records of all vehicles which are costing more than 4 Lacs.
    - Show the cost price, sale price, and profit on all cars.
    - Show the names of all cars alphabetically.
-7. Now create another table named "Vehicle" from the "Car" table created in Question No.3 without records; however, the columns should be in the following order (Do not write the complete new create table statement, rather create a table from the existing Car Table without records). (Do not copy any records from Car Table, copy only columns)
+7. Now create another table named "Vehicle" from the "Car" table created in Question No.3 without records; however, the columns should be in the 
+following order (Do not write the complete new create table statement, rather create a table from the existing Car Table without records).
+ (Do not copy any records from Car Table, copy only columns)
    - TopSpeed
    - Doors
    - CostPrice

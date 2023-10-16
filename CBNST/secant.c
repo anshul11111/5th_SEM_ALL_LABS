@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <math.h>
 
+#define tol 0.0001
+
 #define F(x) (x * x * x - 4 * x - 9)
 
-double SecantMethod(double x0, double x1, double tol)
+double SecantMethod(double x0, double x1)
 {
     double x2, f0, f1;
     int itr = 0;
@@ -13,6 +15,7 @@ double SecantMethod(double x0, double x1, double tol)
         f0 = F(x0);
         f1 = F(x1);
         x2 = x1 - (f1 * (x1 - x0) / (f1 - f0));
+
         printf("Iteration %d: x = %.4lf, f(x) = %.4lf\n", itr, x2, F(x2));
 
         if (fabs(x2 - x1) < tol)
@@ -32,17 +35,14 @@ double SecantMethod(double x0, double x1, double tol)
 
 int main()
 {
-    double x0, x1, tol;
+    double x0, x1;
 
     printf("Enter initial guess x0: ");
     scanf("%lf", &x0);
     printf("Enter initial guess x1: ");
     scanf("%lf", &x1);
-    printf("Enter tolerance: ");
-    scanf("%lf", &tol);
 
-    double root = SecantMethod(x0, x1, tol);
+    double root = SecantMethod(x0, x1);
     printf("Root: %.4lf\n", root);
-
     return 0;
 }

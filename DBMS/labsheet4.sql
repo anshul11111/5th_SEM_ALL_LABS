@@ -24,14 +24,13 @@ DESC Car;
 
 -- Task 5: Populate the "Car" table with relevant data
 -- Insert data into the "Car" table
-INSERT INTO Car (ModelNo, ModelName, Company, EngineCapacity, Color, Doors, Weight, TopSpeed, RPM, CostPrice, SalePrice)
-VALUES
-(1, 'Model1', 'Maruti Suzuki', 1500, 'White', 4, 1200, 160, 6000, 50000, 55000),
-(2, 'Model2', 'Hyundai', 1800, 'Red', 4, 1300, 170, 5500, 60000, 65000),
-(3, 'Model3', 'Honda', 2200, 'Black', 4, 1400, 180, 5800, 70000, 75000),
-(4, 'Model4', 'Maruti Suzuki', 1600, 'Blue', 4, 1250, 155, 5900, 52000, 58000),
-(5, 'Model5', 'Toyota', 2000, 'Silver', 4, 1350, 175, 5600, 65000, 70000),
-(6, 'Model6', 'Hyundai', 1900, 'Red', 4, 1320, 170, 5400, 61000, 67000);
+    INSERT INTO Car (ModelNo, ModelName, Company, EngineCapacity, Color, Doors, Weight, TopSpeed, RPM, CostPrice, SalePrice)VALUES(
+    (1, 'Model1', 'Maruti Suzuki', 1500, 'White', 4, 1200, 160, 6000, 50000, 55000),
+    (2, 'Model2', 'Hyundai', 1800, 'Red', 4, 1300, 170, 5500, 60000, 65000),
+    (3, 'Model3', 'Honda', 2200, 'Black', 4, 1400, 180, 5800, 70000, 75000),
+    (4, 'Model4', 'Maruti Suzuki', 1600, 'Blue', 4, 1250, 155, 5900, 52000, 58000),
+    (5, 'Model5', 'Toyota', 2000, 'Silver', 4, 1350, 175, 5600, 65000, 70000),
+    (6, 'Model6', 'Hyundai', 1900, 'Red', 4, 1320, 170, 5400, 61000, 67000));
 
 -- Task 6: Queries for various outputs
 -- Show all records
@@ -52,7 +51,7 @@ SELECT * FROM Car WHERE CostPrice > 400000;
 -- Show the cost price, sale price, and profit on all cars
 SELECT ModelName, CostPrice, SalePrice, (SalePrice - CostPrice) AS Profit FROM Car;
 
--- Show the names of all cars alphabetically
+-- Show the names of all cars alphabetically6+
 SELECT ModelName FROM Car ORDER BY ModelName;
 
 -- Task 7: Create the "Vehicle" table from the "Car" table structure
@@ -79,7 +78,11 @@ DESC Vehicle;
 -- but the records should be inserted in random order this time (not in the same order as the "Car" Table). 
 -- (Like 11, 4, 5, 1, 7, 3, 2, 9th record, etc.). 
 -- Do not write new Insert queries; rather, copy records from the "Car" table in a random order.
-
+INSERT INTO Vehicle SELECT 
+TopSpeed, Doors, CostPrice, ModelName,
+ Company, RPM, EngineCapacity, Color, 
+ ModelNo, Weight, SalePrice  
+FROM Car ORDER BY DBMS_RANDOM.VALUE;
 
 -- Task 10: Re-write queries from Task 6 on the "Vehicle" table and notice the output.
 -- You can reuse the same queries from Task 6 but replace the table name with "Vehicle."

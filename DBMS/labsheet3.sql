@@ -162,7 +162,9 @@ DROP TABLE Newstudent;
 -- Task 24: Again create the “Newstudent” table similar to Students table but this time without any records, copy only the structure
 CREATE TABLE Newstudent AS SELECT * FROM Students WHERE 1=0;
 
--- Task 25: Create a new table named “MCA” with only three columns RollNo, Name & balance from “Students” table along with its data and Show the records and structure of “MCA” table
+-- Task 25: Create a new table named “MCA” with only 
+--three columns RollNo, Name & balance from “Students” table
+-- along with its data and Show the records and structure of “MCA” table
 CREATE TABLE MCA AS SELECT "Roll No", Name, Balance FROM Students;
 
 SELECT * FROM MCA;
