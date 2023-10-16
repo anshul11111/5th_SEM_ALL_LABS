@@ -1,3 +1,4 @@
+//gauss frwd
 #include <stdio.h>
 float p_cal(float p, int n){
 float temp = p;
